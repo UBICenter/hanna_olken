@@ -72,12 +72,12 @@ welfare, especially with larger budgets and with noisier data.
 
 \section{Background} \label{sec:background}
 
-Hanna and Olken (H\&O) paired household surveys from the Indonesian and 
+Hanna and Olken (H-O) paired household surveys from the Indonesian and 
 Peruvian governments with more detailed consumption surveys. This allowed them 
 to predict actual consumption from simpler surveys that can be used for program 
 targeting.
 
-Their regressions (on log per capita consumption per their appendix) have R2 
+Their regressions (on log per capita consumption per their appendix) have $R^2$ 
 values between 0.53 and 0.66.
 
 They apply the constant relative risk-aversion CRRA total social welfare 
@@ -118,9 +118,9 @@ matches H-O's household-level per-capita consumption data.
 
 Nonpositive per-capita income is set to \$1.
 
-I simulate noise by adding random normal values to log(income), and 
+I simulate noise by adding random normal values to $log(income)$, and 
 exponentiating e by the result. The mean of the noise is adjusted to produce a 
-similar $R^2$ result (on log(income)) to H-O (0.595, achieved with a mean of 
+similar $R^2$ result (on $log(income)$) to H-O (0.595, achieved with a mean of 
 1.37). This is the "low" level of noise; "high" noise has double the noise mean.
 
 
@@ -133,23 +133,33 @@ component. Households with a predicted income percent rank (i.e., based on
 potentially noisy data) below the targeting threshold also get an equal share 
 of the remaining budget.
 
-Given original income and the transfer amount, I calculate the CRRA with rho=3.
+Given original income and the transfer amount, I calculate the CRRA with 
+$\rho=3$.
 
 This is performed for 6 * 3 * 101 * 101 = 183,618 simulations, crossing the 
 following variables:
-* Budget levels as a share of 2018 US GDP of 0.01\%, 0.1\%, 0.2\% (closest to 
-Indonesia's BLT budget), 0.5\%, 1\%, and 5\%. Respectively, this equates to 
-\$2.05, \$20.5, \$41, \$102.5, \$205, and \$1,025 billion USD.
-* Noise levels of none, low (similar to H-O prediction model), and high (double 
-the noise of H-O).
-* Targeting thresholds between 0\% and 100\%, in 1\% increments.
-* UBI shares between 0\% and 100\%, in 1\% increments.
+
+\begin{itemize}
+	
+	\item Budget levels as a share of 2018 US GDP of 0.01\%, 0.1\%, 0.2\% 
+	(closest to 
+	Indonesia's BLT budget), 0.5\%, 1\%, and 5\%. Respectively, this equates to 
+	\$2.05, \$20.5, \$41, \$102.5, \$205, and \$1,025 billion USD.
+	
+	\item Noise levels of none, low (similar to H-O prediction model), and high 
+	(double the noise of H-O).
+	
+	\item Targeting thresholds between 0\% and 100\%, in 1\% increments.
+	
+	\item UBI shares between 0\% and 100\%, in 1\% increments.
+	
+\end{itemize}
 
 
 \section{Results} \label{sec:results}
 
 The most comparable simulation to H-O's Indonesia and Peru cases is a program 
-budgeted to 0.2 percent of GDP with "low" noise (matching their R2). In this 
+budgeted to 0.2 percent of GDP with "low" noise (matching their $R^2$). In this 
 case, the optimal policy targets 11 percent of the population. 
 
 \begin{center}
@@ -158,7 +168,8 @@ case, the optimal policy targets 11 percent of the population.
 \label{fig:pov_rate_income}
 \end{center}
 
-\it{Note: I plot CRRA on a log y scale, where H-O plot it on a linear y scale.}
+\emph{Note: I plot CRRA on a log y scale, where H-O plot it on a linear y 
+scale.}
 
 Using this as a baseline, we can see how the three types of variation affect 
 the optimal targeting.
