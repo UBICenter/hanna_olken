@@ -1,0 +1,31 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Hanna%
+\ \BBA {} Olken%
+}{%
+Hanna%
+\ \BBA {} Olken%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+hannaolken}
+\APACinsertmetastar {%
+hannaolken}%
+\begin{APACrefauthors}%
+Hanna, R.%
+\BCBT {}\ \BBA {} Olken, B\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Universal basic incomes versus targeted transfers:
+  Anti-poverty programs in developing countries} {Universal basic incomes
+  versus targeted transfers: Anti-poverty programs in developing
+  countries}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Economic Perspectives}{32}{4}{201--26}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}
