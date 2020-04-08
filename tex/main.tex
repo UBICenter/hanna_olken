@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 
-\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,ulem,graphicx,caption,color,setspace,sectsty,comment,footmisc,caption,pdflscape,subfigure,array,hyperref,authblk}
+\usepackage{amssymb,amsmath,amsfonts,eurosym,geometry,ulem,graphicx,caption}
+\usepackage{color,setspace,sectsty,comment,footmisc,caption,pdflscape}%,subfigure}
+\usepackage{array,hyperref,authblk,svg}
 \usepackage{makecell}
 \usepackage{apacite}
 \usepackage{algorithm,algorithmic}
@@ -8,7 +10,7 @@
 \usepackage [autostyle, english = american]{csquotes}
 \MakeOuterQuote{"}
 
-\graphicspath{ {../charts/} }
+%\graphicspath{ {../charts/} }
 
 \renewcommand\theadalign{cc}
 \renewcommand\theadfont{\bfseries}
@@ -161,8 +163,9 @@ budgeted to 0.2 percent of GDP with "low" noise (matching their $R^2$). In this
 case, the optimal policy targets 11 percent of the population. 
 
 \begin{center}
-\includegraphics[width=15cm]{single_plot_0_2_0_Low noise}
-\captionof{figure}{}
+\includesvg{single_plot_0_2_0_Low_noise.svg}  % [width=15cm] 
+%[svgpath=../charts/]
+%\captionof{figure}{}
 \label{fig:pov_rate_income}
 \end{center}
 
