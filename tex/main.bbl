@@ -1,6 +1,33 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Fox%
+}{%
+Fox%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+spm}
+\APACinsertmetastar {%
+spm}%
+\begin{APACrefauthors}%
+Fox, L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The {Supplemental Poverty Measure}: 2018} {The
+  {Supplemental Poverty Measure}: 2018}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Current population reports}{}{}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://census.gov/content/dam/Census/library/publications/2019/demo/p60-268.pdf}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Hanna%
 \ \BBA {} Olken%
 }{%
@@ -26,6 +53,58 @@ Hanna, R.%
   countries}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Economic Perspectives}{32}{4}{201--26}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+US{\ }Census{\ }Bureau%
+}{%
+US{\ }Census{\ }Bureau%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+asec}
+\APACinsertmetastar {%
+asec}%
+\begin{APACrefauthors}%
+US{\ }Census{\ }Bureau.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+\APACrefbtitle {Annual Social and Economic Supplements.} {Annual social and
+  economic supplements.}
+\newblock
+\APAChowpublished
+  {\url{https://www.census.gov/data/datasets/time-series/demo/cps/cps-asec.html}}.
+\newblock
+\APACrefnote{(Accessed on 04/28/2020)}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+World{\ }Bank%
+}{%
+World{\ }Bank%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+wb}
+\APACinsertmetastar {%
+wb}%
+\begin{APACrefauthors}%
+World{\ }Bank.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {GDP (current US\$) - Indonesia, Peru, United States | Data.}
+  {Gdp (current us\$) - indonesia, peru, united states | data.}
+\newblock
+\APAChowpublished
+  {\url{https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=ID-PE-US}}.
+\newblock
+\APACrefnote{(Accessed on 04/28/2020)}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
