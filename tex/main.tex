@@ -101,27 +101,35 @@ percent and exclusion error of 52.4 percent."
 These are based on "a fixed transfer budget of approximately \$1.83 billion per 
 year in Indonesia and \$274 million per year in Peru (modeled after the sizes 
 of BLT and Juntos, respectively)" and survey years 2010-2011. As of 2011, 
-Indonesia's GDP was \$893 billion and Peru's GDP was \$172 billion. These 
-budgets were therefore 0.20 percent of GDP in Indonesia and 0.16 percent of GDP 
-in Peru. In the context of the United States in 2018, where GDP was \$20.5 
-trillion, these programs would be equivalent to \$32 billion and \$40 billion.
+Indonesia's GDP was \$893 billion and Peru's GDP was \$172 billion \cite{wb}.
+These budgets were therefore 0.20 percent of GDP in Indonesia and 0.16 percent 
+of GDP in Peru.
+In the context of the United States in 2018, where GDP was \$20.5 
+trillion,
+these programs would be equivalent to \$32 billion and \$40 billion.
 
 
 \section{Data} \label{sec:data}
 
-I use data from the 2018 US Current Population Survey March Supplement, 
-considering total resources from the Supplemental Poverty Measure (SPM). Data 
-is divided by "SPM unit," a type of household unit created by the Census Bureau 
-to estimate groups that share resources. Each SPM unit's income after taxes and 
-transfers ("income") is divided by the number of people in the SPM unit. This 
-matches H-O's household-level per-capita consumption data.
+I use data from the 2019 US Current Population Survey March
+Supplement \cite{asec}, 
+considering total 2018 resources from the Supplemental Poverty Measure (SPM) 
+\cite{spm}.
+I divide data by "SPM unit," a type of household unit created by the Census 
+Bureau to estimate groups that share resources,
+and divide each SPM unit's income after taxes and transfers ("income") by the 
+number of people in the SPM unit.
+This approach mirrors H-O's usage of household-level per-capita consumption 
+data.
 
-Nonpositive per-capita income is set to \$1.
+I set nonpositive per-capita income to \$1.
 
-I simulate noise by adding random normal values to $log(income)$, and 
-exponentiating e by the result. The mean of the noise is adjusted to produce a 
-similar $R^2$ result (on $log(income)$) to H-O (0.595, achieved with a mean of 
-1.37). This is the "low" level of noise; "high" noise has double the noise mean.
+I simulate noise by adding random normal values to $\ln{income}$, and 
+exponentiating $e$ by the result.
+The mean of the noise is adjusted to produce a 
+similar $R^2$ result (on $\ln{income}$) to H-O (0.595, achieved with a mean of 
+1.37).
+This is the "low" level of noise; "high" noise has double the noise mean.
 
 
 \section{Methodology} \label{sec:methodology}
@@ -228,9 +236,11 @@ H-O), 68 percent.
 In the baseline scenario (0.2 percent of GDP; low noise), social welfare is not 
 improved when setting aside part of the budget for a UBI, nor is it improved 
 with a noiseless signal. However, when noise is doubled, the previous optimum 
-CRRA of -0.0045 can improve to -0.0015. Without the option of reserving part 
-for a UBI, this high-noise scenario is optimized by targeting the bottom 68 
-percent; with the option, welfare is improved by directing 52 percent of the 
+CRRA of $-0.0045$ can improve to $-0.0015$.
+Without the option of reserving part for a UBI,
+this high-noise scenario is optimized by targeting the bottom 68 
+percent;
+with the option, welfare is improved by directing 52 percent of the 
 budget to a UBI, and targeting the remainder to the bottom 14 percent.
 
 High-noise programs benefit substantially from diverting a share to a UBI, 
@@ -249,15 +259,18 @@ and 8.3 percent for a 5 percent of GDP program.
 
 I extend the approach of Hanna and Olken (2018), which optimizes social welfare 
 by varying a program's targeting, by modeling different budget levels, noise 
-levels, and the option to use part of the budget for a UBI. I find that larger 
-programs generate greater social welfare by providing more generous transfers 
-and by including more of the population. Programs that only have access to a 
-noisy signal should include more of the population, though they will ultimately 
-achieve less social welfare than sharper signals. When the signal is noisy, 
-using part of the budget for a UBI can improve social welfare by reducing 
-exclusion errors; the advantages of such a system are largest for small 
-programs with very noisy signals, though they can also help for larger programs 
-with less noisy signals.
+levels, and the option to use part of the budget for a UBI.
+I find that larger  programs generate greater social welfare by providing more 
+generous transfers and by including more of the population.
+Programs that only have access to a noisy signal should include more of the 
+population,
+though they will ultimately achieve less social welfare than sharper signals.
+When the signal is noisy,
+using part of the budget for a UBI can improve social welfare by
+reducing exclusion errors;
+the advantages of such a system are largest for small programs with
+very noisy signals,
+though they can also help for larger programs with less noisy signals.
 
 This analysis does not consider horizontal equity, which Hanna and Olken define 
 as the share of households with similar true consumption (e.g. within 5 
