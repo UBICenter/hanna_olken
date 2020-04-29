@@ -42,7 +42,10 @@
 
 \begin{titlepage}
 \title{Optimal transfer targeting and universal basic income with noisy data}
-\author{Max Ghenis\thanks{Affiliations: Massachusetts Institute of Technology and UBI Center (max@ubicenter.org).
+\author{Max Ghenis\thanks{Affiliations: Massachusetts Institute of Technology 
+and UBI Center (max@ubicenter.org).
+\protect \\
+\protect \\Thanks to Ben Olken for helpful comments.
 }}
 
 \date{April 8, 2020}
@@ -70,15 +73,40 @@ welfare, especially with larger budgets and with noisier data.
 \doublespacing
 
 
-\section{Background} \label{sec:background}
+\section{Introduction} \label{sec:introduction}
 
-Hanna and Olken (H-O) paired household surveys from the Indonesian and 
-Peruvian governments with more detailed consumption surveys. This allowed them 
-to predict actual consumption from simpler surveys that can be used for program 
-targeting.
+How narrowly or broadly to target transfer programs is a central question
+in public finance, especially in developing countries with highly constrained
+government budgets and difficulty implementing phase-outs more common
+in developed country safety net programs.
+On one hand, narrow targeting concentrates resources on those in greatest need;
+on the other, excluding those just above the threshold might miss opportunities
+to reduce poverty.
+This challenge is further complicated by imprecise household surveys used to
+target these programs, which must be administered widely.
 
-Their regressions (on log per capita consumption per their appendix) have $R^2$ 
-values between 0.53 and 0.66.
+To weigh these trade-offs, \citeA{hannaolken} (\textit{H-O})
+paired household surveys from the Indonesian and Peruvian governments with more 
+detailed consumption surveys showing a ground truth signal of consumption.
+This enabled them to predict actual consumption from simpler surveys that can
+be used for program targeting,
+and to estimate the precision of these predictions.
+
+\begin{center}
+	\includegraphics[width=15cm]{../img/hanna_olken_2018_pred_actual_cons}
+	% Otherwise the wrapped line isn't centered.
+	\captionsetup{justification=centering}
+	\captionof{figure}{Predicted versus Actual per-capita Consumption for 
+	Households in Test Set Data, Indonesia \protect\cite{hannaolken}}
+	\label{fig:ho_pred_actual_cons}
+\end{center}
+
+Their regressions (on log per capita
+consumption\footnote{Per the appendix in \citeA{hannaolken}.})
+were moderately accurate, with $R^2$ values between 0.53 and 0.66.
+Given this imperfect targeting data, they estimate the effect on social
+welfare of targeting at different thresholds in comparison to universal basic
+incomes.
 
 They apply the constant relative risk-aversion CRRA total social welfare 
 utility function:
@@ -87,10 +115,18 @@ utility function:
 U = \frac{\sum{(y_i + b_i)^{1-\rho}}}{1-\rho}
 \end{equation}
 
-They apply CRRA a rho value of 3 to find the total social welfare as a function 
+Where $\rho$ indicates the social weight of lower-consumption households.
+Using $\rho = 3$, they find the total social welfare as a function 
 of the targeted share of the population. The below chart uses inclusion error 
 on the x axis for comparison between Indonesia and Peru; this moves with the 
 share of the population receiving the transfer.
+
+\begin{center}
+	\includegraphics[width=15cm]{../img/hanna_olken_2018_social_welfare_vs_inclusion_error}
+	\captionof{figure}{Social Welfare versus Inclusion Error 
+	\protect\cite{hannaolken}}
+	\label{fig:ho_sw_inclusion_error}
+\end{center}
 
 They find: "In Indonesia, the socially optimal program calculated in this way 
 targets about 19 percent of the population, with inclusion error of 7.4 percent 
@@ -113,19 +149,19 @@ these programs would be equivalent to \$32 billion and \$40 billion.
 
 I use data from the 2019 US Current Population Survey March
 Supplement \cite{asec}, 
-considering total 2018 resources from the Supplemental Poverty Measure (SPM) 
-\cite{spm}.
+considering total 2018 resources from the Supplemental Poverty Measure
+(\textit{SPM}) \cite{spm}.
 I divide data by "SPM unit," a type of household unit created by the Census 
 Bureau to estimate groups that share resources,
-and divide each SPM unit's income after taxes and transfers ("income") by the 
-number of people in the SPM unit.
+and divide each SPM unit's income after taxes and transfers (\textit{income})
+by the number of people in the SPM unit.
 This approach mirrors H-O's usage of household-level per-capita consumption 
 data.
 
 I set nonpositive per-capita income to \$1.
 
 I simulate noise by adding random normal values to $\ln{income}$, and 
-exponentiating $e$ by the result.
+exponentiating the result.
 The mean of the noise is adjusted to produce a 
 similar $R^2$ result (on $\ln{income}$) to H-O (0.595, achieved with a mean of 
 1.37).
@@ -172,14 +208,13 @@ case, the optimal policy targets 11 percent of the population.
 
 \begin{center}
 \includegraphics{single_plot_0_2_0_Low_noise}  % [width=15cm] 
-\captionof{figure}{CRRA by share given transfer, 0.2\% of GDP, low noise}
+\captionof{figure}{CRRA by share given transfer, 0.2\% of GDP, low 
+noise\protect\footnotemark}
 \label{fig:single_plot_0_2_0_Low_noise}
-\medskip % induce some separation between caption and explanatory material
-\begin{minipage}{0.65\textwidth} % choose width suitably
-	{\footnotesize I plot CRRA on a log y scale, where H-O plot it on a 
-	linear y scale.\par}
-\end{minipage}
 \end{center}
+
+\footnotetext{I plot CRRA on a log y scale, where H-O plot it on a linear y 
+scale.}
 
 Using this as a baseline, we can see how the three types of variation affect 
 the optimal targeting.
